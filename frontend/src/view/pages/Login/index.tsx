@@ -1,22 +1,23 @@
 import { Link } from "react-router-dom";
+import { useLoginController } from "./useLoginController";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import { useLoginController } from "./useLoginController";
 
 export function Login() {
   const { handleSubmit, register, errors, isLoading } = useLoginController()
 
   return (
-    <>
+    <div className="w-full h-full flex flex-col items-center justify-center">
+      <div className=" w-full max-w-[500px] px-4">
       <header className="flex flex-col items-center gap-4 text-center">
         <h1 className="text-2xl font-bold tracking-[-1px]">Entre em sua conta</h1>
 
         <p className="space-x-2">
-          <span className="text-gray-700 tracking-[-0.5px]">
+          <span className="text-gray-600 tracking-[-0.5px]">
             Novo por aqui?
           </span>
           <Link to="/register"
-          className="tracking-[-0.5px] text-violet-950 font-medium"
+          className="tracking-[-0.5px] font-medium"
           >
             Crie uma conta
           </Link>
@@ -40,6 +41,12 @@ export function Login() {
         {...register('password')}
         />
 
+        <Link
+        to="/forget-password"
+        >
+          Esqueceu a sua senha?
+        </Link>
+
         <Button
         type="submit"
         className="mt-2"
@@ -48,6 +55,7 @@ export function Login() {
           Entrar
         </Button>
       </form>
-    </>
+      </div>
+    </div>
   )
 }

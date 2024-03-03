@@ -6,7 +6,8 @@ import { useRegisterController } from "./useRegisterController";
 export function Register() {
   const {errors, register, handleSubmit, isLoading} = useRegisterController();
   return (
-    <>
+    <div className="w-full h-full flex flex-col items-center justify-center">
+    <div className=" w-full max-w-[500px] px-4">
       <header className="flex flex-col items-center gap-4 text-center">
         <h1 className="text-2xl font-bold tracking-[-1px]">Crie sua conta</h1>
         <p className="space-x-2">
@@ -14,7 +15,7 @@ export function Register() {
             Já possui uma conta?
           </span>
           <Link to="/login"
-          className="tracking-[-0.5px] text-violet-950 font-medium"
+          className="tracking-[-0.5px] font-medium"
           >
             Fazer Login
           </Link>
@@ -53,6 +54,7 @@ export function Register() {
           Criar conta
         </Button>
       </form>
-    </>
+    </div>
+    </div>
   )
 }
