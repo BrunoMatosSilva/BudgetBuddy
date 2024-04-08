@@ -5,9 +5,11 @@ import { usersService } from "../services/usersService";
 import { httpClient } from "../services/httpClient";
 import { toast } from "../../lib/utils/ui/use-toast";
 import { PageLoader } from "../../view/components/PageLoader";
+import { User } from "../entities/User";
 
 interface AuthContextValue {
   signedIn: boolean;
+  user: User | undefined;
   signin(accessToken:string): void;
   signout(): void;
 }
@@ -39,7 +41,7 @@ export function AuthProvider({children}: { children: React.ReactNode }) {
     setSignedIn(false)
   },[setSignedIn])
 
-  const { isError, isFetching, isSuccess, remove } = useQuery({
+  const { isError, isFetching, isSuccess, remove, data } = useQuery({
     queryKey: ['loggedUser'],
     queryFn: async () => usersService.me(),
     enabled: signedIn,
@@ -60,7 +62,8 @@ export function AuthProvider({children}: { children: React.ReactNode }) {
     <AuthContext.Provider value={{
       signedIn: isSuccess && signedIn,
       signin,
-      signout
+      signout,
+      user: data
       }}>
       <PageLoader isLoading={isFetching} />
       {!isFetching && children}

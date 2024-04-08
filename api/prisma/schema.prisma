@@ -24,7 +24,7 @@ model User {
 
 enum BankAccountType {
   CHECKING
-  INVESTMEN
+  INVESTMENT
   CASH
 
   @@map("bank_account_type")

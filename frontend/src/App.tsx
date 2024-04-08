@@ -1,5 +1,4 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Router } from "./Router";
 import { AuthProvider } from "./app/contexts/AuthContext";
 import { ThemeProvider } from "./app/contexts/ThemeProvider";
@@ -22,7 +21,6 @@ export function App() {
         <Router />
         <Toaster />
         </AuthProvider>
-        <ReactQueryDevtools />
       </QueryClientProvider>
     </ThemeProvider>
   )

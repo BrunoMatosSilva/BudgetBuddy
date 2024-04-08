@@ -3,7 +3,7 @@ import { Logo } from "../components/Logo";
 import { useTheme } from '../../app/contexts/ThemeProvider';
 import { Button } from '../../lib/utils/ui/button';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../../lib/utils/ui/dropdown-menu';
+import { DropdownMenuComponents } from '../components/DropdownMenu';
 
 export function AuthLayout(){
     const { setTheme } = useTheme()
@@ -30,26 +30,23 @@ export function AuthLayout(){
               </Button>
             </Link>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
-                <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                <span className="sr-only">Toggle theme</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>
-                Light
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")}>
-                Dark
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>
-                System
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+            <DropdownMenuComponents.Root>
+              <DropdownMenuComponents.Trigger>
+                <Button variant="outline" size="icon">
+                  <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              </DropdownMenuComponents.Trigger>
+              <DropdownMenuComponents.Content>
+                <DropdownMenuComponents.Item onSelect={() => setTheme("light")}>
+                  Light
+                </DropdownMenuComponents.Item>
+                <DropdownMenuComponents.Item onSelect={() => setTheme("dark")}>
+                  Dark
+                </DropdownMenuComponents.Item>
+              </DropdownMenuComponents.Content>
+            </DropdownMenuComponents.Root>
           </div>
         </div>
       </header>
