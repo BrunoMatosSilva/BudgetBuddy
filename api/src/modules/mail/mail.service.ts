@@ -33,7 +33,7 @@ export class MailService {
     return `
       <p>Olá, ${email}.</p>
       <p>Aqui está o seu link para recuperação de senha:</p>
-      <p>${env.frontendUrl}/reset-password?t=${token}</p>
+      <p>${env.frontendUrl}/#/reset-password?t=${token}</p>
       <p>(Este link expira em 5 minutos)</p>
     `
   }
