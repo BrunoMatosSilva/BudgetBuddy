@@ -6,6 +6,7 @@ import { Dashboard } from "../view/pages/Dashboard";
 import { ResetPassword } from "../view/pages/ResetPassword";
 import { Home } from "../view/pages/Home";
 import { ForgetPassword } from "../view/pages/ForgetPassword";
+import { NotFound } from "../view/pages/NotFound";
 
 export function Router() {
   return (
@@ -16,7 +17,8 @@ export function Router() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/reset-password" element={<ResetPassword />} />
-        <Route path="/forget-password" element={<ForgetPassword />} />
+          <Route path="/forget-password" element={<ForgetPassword />} />
+          <Route path="*" element={<NotFound />} />
       </Route>
 
       <Route element={<AuthGuard isPrivate />}>
