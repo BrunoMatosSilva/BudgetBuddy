@@ -12,12 +12,12 @@ export function AuthLayout(){
     <div className="flex w-full h-full items-center justify-center">
       <div className="w-full h-full flex justify-center items-center flex-col">
       <header className='w-full'>
-        <div className='flex w-full justify-between pt-4 px-8'>
+        <div className='flex w-full justify-between items-center md:pt-4 pt-2 px-2 md:px-8'>
           <Link to="/">
             <Logo className="text-gray-500 h-6" />
           </Link>
 
-          <div className='flex items-center gap-4'>
+          <div className='flex items-center gap-1 md:gap-4'>
           <Link to="/login">
               <Button>
                 Entrar

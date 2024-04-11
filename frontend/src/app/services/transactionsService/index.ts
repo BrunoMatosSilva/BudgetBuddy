@@ -1,11 +1,11 @@
 import { create } from "./create";
 import { getAll } from "./getAll";
 import { remove } from "./remove";
-import { update } from "./update";
+import { updateTransaction } from "./updateTransaction";
 
 export const transactionsService = {
   create,
   getAll,
-  update,
-  remove
+  remove,
+  updateTransaction
 }

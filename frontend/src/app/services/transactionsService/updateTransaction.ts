@@ -11,7 +11,7 @@ export interface UpdateTransactionsParams {
 }
 
 
-export async function update({id, ...params}:UpdateTransactionsParams) {
+export async function updateTransaction({id, ...params}:UpdateTransactionsParams) {
   const { data } = await httpClient.put(`/transactions/${id}`, params)
 
   return data

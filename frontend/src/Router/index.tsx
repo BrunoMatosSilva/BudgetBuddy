@@ -3,21 +3,20 @@ import { AuthGuard } from "./authGuard";
 import { Login } from "../view/pages/Login";
 import { Register } from "../view/pages/Register";
 import { Dashboard } from "../view/pages/Dashboard";
-import { AuthLayout } from "../view/layouts";
 import { ResetPassword } from "../view/pages/ResetPassword";
 import { Home } from "../view/pages/Home";
+import { ForgetPassword } from "../view/pages/ForgetPassword";
 
 export function Router() {
   return (
     <BrowserRouter>
     <Routes>
       <Route element={<AuthGuard isPrivate={false} />}>
-      <Route element={<AuthLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/forget-password" element={<ResetPassword />} />
-      </Route>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
       </Route>
 
       <Route element={<AuthGuard isPrivate />}>

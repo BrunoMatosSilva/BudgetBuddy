@@ -34,7 +34,7 @@ export function Transactions() {
   const hasTransaction = transactions.length > 0
 
   return(
-    <div className="bg-accent-foreground rounded-2xl w-full h-full md:max-h-[650px] px-4 py-8 md:p-10 flex flex-col">
+    <div className="bg-accent-foreground rounded-2xl w-full h-full px-4 py-8 md:p-10 flex flex-col">
 
       {isInitialLoading && (
         <div className="w-full h-full flex items-center justify-center">

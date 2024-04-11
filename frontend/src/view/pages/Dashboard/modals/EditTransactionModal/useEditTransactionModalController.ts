@@ -47,7 +47,7 @@ export function useEditTransactionModalController(
   const { accounts } = useBankAccounts()
   const { categories: categoriesList } = useCategories()
   const queryClient = useQueryClient()
-  const { isLoading , mutateAsync} = useMutation(transactionsService.update)
+  const { isLoading , mutateAsync} = useMutation(transactionsService.updateTransaction)
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const { isLoading: isLoadingDelete, mutateAsync: removeTransaction } = useMutation(transactionsService.remove)
 
