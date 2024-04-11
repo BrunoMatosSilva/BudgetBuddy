@@ -1,4 +1,4 @@
-import { ComponentProps, useState } from "react";
+import { useState } from "react";
 import { cn } from "../../lib/utils";
 import { CrossCircledIcon } from "@radix-ui/react-icons";
 import { formatDate } from "../../app/utils/formatDate";
