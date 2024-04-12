@@ -9,8 +9,8 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe())
   app.enableCors({
-    allowedHeaders: ['content-type'],
-    origin: 'https://budget-buddy-api.up.railway.app/',
+    allowedHeaders: ['content-type', 'authorization'],
+    origin: ['http://localhost:5173', 'https://budgetbuddy-x2wz.onrender.com/'],
     credentials: true,
   })
 
