@@ -12,9 +12,7 @@ async function bootstrap() {
     origin: '*'
   })
 
-  const port = process.env.PORT || 3000;
-  await app.listen(port, () => {
-    console.log(`Server listening on PORT: ${port}`)
-  });
+  const port = process.env.PORT || 3000; // Usa a variável de ambiente PORT ou 3000 como padrão
+  await app.listen(port);
 }
 bootstrap();
