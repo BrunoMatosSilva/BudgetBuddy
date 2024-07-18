@@ -52,7 +52,7 @@ export function Home() {
       </header>
       <div className='flex flex-col w-full mt-12 items-center justify-center'>
         <h1 className="w-full max-w-3xl text-center md:text-7xl text-4xl px-2 font-semibold tracking-tight">
-          Controle suas <span className="bg-gradient-to-r from-violet-600 via-orange-500 to-indigo-400 text-transparent bg-clip-text">Financias</span> em pouco tempo.
+          Controle suas <span className="bg-gradient-to-r from-violet-600 via-orange-500 to-indigo-400 text-transparent bg-clip-text">Finanças</span> em pouco tempo.
         </h1>
 
         <p className="mt-8 px-2 text-primary/60 max-w-3xl md:text-2xl text-xl text-center tracking-tighter">
