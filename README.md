@@ -30,7 +30,7 @@ App desenvolvido com o intuito de se torna um produto, focado no controle financ
 
 &nbsp;
 
-Link do Projeto: https://budgetbuddy-x2wz.onrender.com
+Link do Projeto: https://budgetbuddy-gamma.vercel.app
 
 #### Que esse Projeto agregue sempre na evolução do aprendizado 🚀.
 
